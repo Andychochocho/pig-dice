@@ -20,17 +20,22 @@ function pigDice(num){
     }
 }
 
-function PlayerOne(name, tempHand, totalScore){
+function PlayerOne(name, currentHand, totalScore){
     this.name = name;
-    this.tempHand = tempHand;
+    this.currentHand= currentHand;
     this.totalScore = totalScore;
 }
 
-function PlayerTwo(name, tempHand, totalScore){
-    this.name = name;
-    this.tempHand = tempHand;
-    this.totalScore = totalScore;
+PlayerOne.prototype.newTotalScore = function(){
+  this.totalScore = this.totalScore + this.currentHand;
 }
+
+// function PlayerTwo(name, currentHand, totalScore){
+//     this.name = name;
+//     this.currentHand = currentHand;
+//     this.totalScore = totalScore;
+// }
+
 
 
 

@@ -24,15 +24,20 @@ describe("PlayerOne", function(){
   it("will have player1 keep track of temporary score",function(){
     var player1 = new PlayerOne("Tim", 4, 16);
     expect(player1.name).to.equal("Tim");
-    expect(player1.tempHand).to.equal(4);
+    expect(player1.currentHand).to.equal(4);
     expect(player1.totalScore).to.equal(16);
   });
-});
-describe("PlayerTwo", function(){
-  it("will have player1 keep track of temporary score",function(){
-    var player2 = new PlayerTwo("Rim", 1, 99);
-    expect(player2.name).to.equal("Rim");
-    expect(player2.tempHand).to.equal(1);
-    expect(player2.totalScore).to.equal(99);
+
+  it("will add the current score to the total score for a new total score", function(){
+    var newTotalScore = (4 + 16);
+    expect(newTotalScore).to.equal(20);
   });
 });
+// describe("PlayerTwo", function(){
+//   it("will have player1 keep track of temporary score",function(){
+//     var player2 = new PlayerTwo("Rim", 1, 99);
+//     expect(player2.name).to.equal("Rim");
+//     expect(player2.currentHand).to.equal(1);
+//     expect(player2.totalScore).to.equal(99);
+//   });
+// });
