@@ -50,16 +50,28 @@ $(document).ready(function(){
     $(".startScreen").slideUp();
     $(".gameScreen").show();
 
+    //set initial turn score to 0 upon opening game screen
     $("#currentTurn1").val(0);
     $("#currentTurn2").val(0);
 
+    //set initial turn score to 0 upon opening game screen
+    $("#totalScore1").val(0);
+    $("#totalScore2").val(0);
+
     //click event for player1 rolling the dice
       $("#player1roll").click(function(event) {
+        debugger;
+        //variable
+        var dice1 = dice();
+        console.log(dice1);
+
+        //set initial turn score to 0 upon opening game screen
+        $("#currentTurn1").val(dice());
+
+
+
         // function dice(score);
-
-        var startingScore = 0;
-
-        $("totalScore1").val(startingScore);
+        // $("totalScore1").val(startingScore);
 
       event.preventDefault;
     });
