@@ -30,9 +30,9 @@ PlayerOne.prototype.newTotalScore = function(){
   return this.totalScore = this.startingScore + this.currentHand;
 };
 
-Roll.prototype. = function(){
-  return this.currentHand += playerRoll;
-};
+// Roll.prototype. === function(){
+//   return this.currentHand += playerRoll;
+// };
 
 // function PlayerTwo(name, currentHand, totalScore){
 //     this.name = name;
@@ -44,6 +44,11 @@ pigDice(dice());
 
 //User Interface
 $(document).ready(function(){
+  $("#startGame").click(function(event) {
+    $(".startScreen").slideUp();
+    $(".gameScreen").show();
+
+
   $("#player1roll").click(function(event) {
     var playerOneName = prompt("What is your name playa?");
     var startingScore = 0;
@@ -51,5 +56,6 @@ $(document).ready(function(){
     $("totalScore1").val(startingScore);
 
     event.preventDefault;
+  });
   });
 });
