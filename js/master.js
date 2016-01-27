@@ -22,13 +22,17 @@ function pigDice(num){
 
 function PlayerOne(name, currentHand, totalScore){
     this.name = name;
-    this.currentHand= currentHand;
+    this.currentHand = currentHand;
     this.totalScore = totalScore;
 }
 
 PlayerOne.prototype.newTotalScore = function(){
-  this.totalScore = this.totalScore + this.currentHand;
-}
+  return this.totalScore = this.startingScore + this.currentHand;
+};
+
+Roll.prototype. = function(){
+  return this.currentHand += playerRoll;
+};
 
 // function PlayerTwo(name, currentHand, totalScore){
 //     this.name = name;
@@ -36,7 +40,16 @@ PlayerOne.prototype.newTotalScore = function(){
 //     this.totalScore = totalScore;
 // }
 
-
-
-
 pigDice(dice());
+
+//User Interface
+$(document).ready(function(){
+  $("#player1roll").click(function(event) {
+    var playerOneName = prompt("What is your name playa?");
+    var startingScore = 0;
+
+    $("totalScore1").val(startingScore);
+
+    event.preventDefault;
+  });
+});
