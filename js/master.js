@@ -44,18 +44,24 @@ pigDice(dice());
 
 //User Interface
 $(document).ready(function(){
+
+  //click event for hiding the start screen and hiding the game screen
   $("#startGame").click(function(event) {
     $(".startScreen").slideUp();
     $(".gameScreen").show();
 
+    $("#currentTurn1").val(0);
+    $("#currentTurn2").val(0);
 
-  $("#player1roll").click(function(event) {
-    var playerOneName = prompt("What is your name playa?");
-    var startingScore = 0;
+    //click event for player1 rolling the dice
+      $("#player1roll").click(function(event) {
+        // function dice(score);
 
-    $("totalScore1").val(startingScore);
+        var startingScore = 0;
 
-    event.preventDefault;
-  });
+        $("totalScore1").val(startingScore);
+
+      event.preventDefault;
+    });
   });
 });
