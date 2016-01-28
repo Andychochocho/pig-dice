@@ -30,25 +30,19 @@ PlayerOne.prototype.newTotalScore = function(){
   return this.totalScore = this.startingScore + this.currentHand;
 };
 
-// Roll.prototype. === function(){
-//   return this.currentHand += playerRoll;
-// };
-
-// function PlayerTwo(name, currentHand, totalScore){
-//     this.name = name;
-//     this.currentHand = currentHand;
-//     this.totalScore = totalScore;
-// }
-
 pigDice(dice());
 
 //User Interface
 $(document).ready(function(){
 
+  var playerInputName = $("#player1name").val();
   //click event for hiding the start screen and hiding the game screen
   $("#startGame").click(function(event) {
     $(".startScreen").slideUp();
     $(".gameScreen").show();
+
+    $("#inputPlayer1name").text();
+    $("#inputPlayer2name").text();
 
     //set initial turn score to 0 upon opening game screen
     $("#currentTurn1").val(0);
@@ -60,22 +54,17 @@ $(document).ready(function(){
 
     //click event for player1 rolling the dice
       $("#player1roll").click(function(event) {
-        // debugger;
+
         //variable
         var dice1 = dice();
 
-// debugger;
         if (dice1 === 1){
         $("#player1roll").prop("disabled", true);
-      };
-
+        };
+        var player1object = new PlayerOne(playerInputName);
         //set initial turn score to 0 upon opening game screen
         $("#currentTurn1").val(dice1);
 
-
-
-        // function dice(score);
-        // $("totalScore1").val(startingScore);
 
       event.preventDefault;
     });

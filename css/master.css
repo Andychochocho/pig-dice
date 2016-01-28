@@ -1,3 +1,9 @@
+.container {
+  background-image: url(../image/pig.jpg), url(../image/dice.jpg);
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat;
+}
+
 h1 {
   text-align: center;
 }
