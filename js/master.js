@@ -35,13 +35,19 @@ pigDice(dice());
 //User Interface
 $(document).ready(function(){
 
-  var playerInputName = $("#player1name").val();
+
   //click event for hiding the start screen and hiding the game screen
   $("#startGame").click(function(event) {
     $(".startScreen").slideUp();
     $(".gameScreen").show();
 
-    $("#inputPlayer1name").text();
+    //Receive user input for player 1 name
+    var player1object_name = $("#player1name").val();
+    //give user input name to a new object, and display on game screen
+    var player1info = new PlayerOne(player1object_name);
+
+    //display player names on game screen
+    $("#inputPlayer1name").text(player1object_name);
     $("#inputPlayer2name").text();
 
     //set initial turn score to 0 upon opening game screen
@@ -61,7 +67,7 @@ $(document).ready(function(){
         if (dice1 === 1){
         $("#player1roll").prop("disabled", true);
         };
-        var player1object = new PlayerOne(playerInputName);
+
         //set initial turn score to 0 upon opening game screen
         $("#currentTurn1").val(dice1);
 

@@ -1,23 +1,29 @@
-.container {
+h1 {
+  text-align: center;
+}
+
+.jumbotron {
   background-image: url(../image/pig.jpg), url(../image/dice.jpg);
   background-position: left bottom, right bottom;
   background-repeat: no-repeat;
-}
-
-h1 {
-  text-align: center;
 }
 
 .gameScreen {
   display: none;
 }
 
-.player1 {
+.column1player {
   border: 2px solid red;
   border-radius: 5px;
 }
 
-.player2 {
+.column2player {
   border: 2px solid blue;
   border-radius: 5px;
+}
+
+#player1name , #inputPlayer1name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 }
