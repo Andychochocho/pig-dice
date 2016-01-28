@@ -22,6 +22,24 @@ h1 {
   border-radius: 5px;
 }
 
+.versus img {
+  height: 150px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.versus button {
+  margin-left: 15%;
+}
+
+#player1name:hover {
+  box-shadow: 0 0 5px red;
+}
+
+#player2name:hover {
+  box-shadow: 0 0 5px blue;
+}
+
 #player1name, #player2name , #inputPlayer1name , #inputPlayer2name {
   text-align: center;
   font-weight: bold;
