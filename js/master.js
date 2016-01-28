@@ -20,13 +20,13 @@ function pigDice(num){
     }
 }
 
-function PlayerOne(name, currentHand, totalScore){
+function Player(name, currentHand, totalScore){
     this.name = name;
     this.currentHand = currentHand;
     this.totalScore = totalScore;
 }
 
-PlayerOne.prototype.newTotalScore = function(){
+Player.prototype.newTotalScore = function(){
   return this.totalScore = this.startingScore + this.currentHand;
 };
 
@@ -41,14 +41,16 @@ $(document).ready(function(){
     $(".startScreen").slideUp();
     $(".gameScreen").show();
 
-    //Receive user input for player 1 name
+    //Receive user input for player names
     var player1object_name = $("#player1name").val();
-    //give user input name to a new object, and display on game screen
-    var player1info = new PlayerOne(player1object_name);
+    var player2object_name = $("#player2name").val();
+    //give user input name to a new objects, and display on game screen
+    var player1info = new Player(player1object_name);
+    var player2info = new Player(player2object_name);
 
     //display player names on game screen
     $("#inputPlayer1name").text(player1object_name);
-    $("#inputPlayer2name").text();
+    $("#inputPlayer2name").text(player2object_name);
 
     //set initial turn score to 0 upon opening game screen
     $("#currentTurn1").val(0);
@@ -69,7 +71,7 @@ $(document).ready(function(){
         };
 
         //set initial turn score to 0 upon opening game screen
-        $("#currentTurn1").val(dice1);
+        $("#currentRoll1").val(dice1);
 
 
       event.preventDefault;

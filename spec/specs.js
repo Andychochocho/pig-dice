@@ -20,9 +20,9 @@ describe("PigDice",function(){
     expect(pigDice(1)).to.equal(1);
   });
 });
-describe("PlayerOne", function(){
-  it("will have player1 keep track of temporary score",function(){
-    var player1 = new PlayerOne("Tim", 4, 16);
+describe("Player", function(){
+  it("will have player keep track of temporary score",function(){
+    var player1 = new Player("Tim", 4, 16);
     expect(player1.name).to.equal("Tim");
     expect(player1.currentHand).to.equal(4);
     expect(player1.totalScore).to.equal(16);

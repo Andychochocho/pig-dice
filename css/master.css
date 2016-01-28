@@ -22,7 +22,7 @@ h1 {
   border-radius: 5px;
 }
 
-#player1name , #inputPlayer1name {
+#player1name, #player2name , #inputPlayer1name , #inputPlayer2name {
   text-align: center;
   font-weight: bold;
   font-size: 18px;
