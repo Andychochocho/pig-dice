@@ -60,13 +60,17 @@ $(document).ready(function(){
 
     //click event for player1 rolling the dice
       $("#player1roll").click(function(event) {
-        debugger;
+        // debugger;
         //variable
         var dice1 = dice();
-        console.log(dice1);
+
+// debugger;
+        if (dice1 === 1){
+        $("#player1roll").prop("disabled", true);
+      };
 
         //set initial turn score to 0 upon opening game screen
-        $("#currentTurn1").val(dice());
+        $("#currentTurn1").val(dice1);
 
 
 
